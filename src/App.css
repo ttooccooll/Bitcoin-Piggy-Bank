@@ -391,4 +391,7 @@ input::placeholder {
   .title-screen, .title, .input {
     margin: 2px;
   }
+  .input, .startButton {
+    height: 50%;
+  }
 }
