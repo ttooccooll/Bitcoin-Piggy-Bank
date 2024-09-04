@@ -118,7 +118,8 @@ function App() {
     localStorage.setItem("nameKey", nameKey);
     localStorage.setItem("urlKey", urlKey);
     localStorage.setItem("lnurlKey", lnurlKey);
-  }, [apiKey, nameKey, urlKey, lnurlKey]);
+    localStorage.getItem("showTitleScreen");
+  }, [apiKey, nameKey, urlKey, lnurlKey, showTitleScreen]);
 
 
   useEffect(() => {
