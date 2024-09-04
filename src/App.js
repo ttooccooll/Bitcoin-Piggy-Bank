@@ -52,7 +52,7 @@ function App() {
       "Access-Control-Allow-Origin": "*"
     };
     axios
-      .get(`https://${urlKey}/api/v1/wallet`, { headers })
+      .get(`${urlKey}/api/v1/wallet`, { headers })
       .then((res) => {
         setBalance(parseInt(res.data.balance / 1000));
       })
@@ -65,7 +65,7 @@ function App() {
       "Access-Control-Allow-Origin": "*"
     };
     axios
-      .get(`https://${urlKey}/api/v1/payments`, { headers })
+      .get(`${urlKey}/api/v1/payments`, { headers })
       .then((res) => {
         setTransactions(res.data);
       })

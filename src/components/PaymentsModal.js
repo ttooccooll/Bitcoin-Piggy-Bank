@@ -38,7 +38,7 @@ const PaymentsModal = ({ modalState, setModalState, apiKey, urlKey }) => {
       memo: formData.memo,
     };
     axios
-      .post(`https://${urlKey}/api/v1/payments`, data, { headers })
+      .post(`${urlKey}/api/v1/payments`, data, { headers })
       .then((res) => setInvoice(res.data.payment_request))
       .catch((err) => console.log(err));
 
