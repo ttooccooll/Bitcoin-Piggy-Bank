@@ -30,6 +30,7 @@ function App() {
     setUrlKey("");
     setLnurlKey("");
     setShowTitleScreen(true);
+    localStorage.clear();
   };
 
   const getPrice = () => {
@@ -111,6 +112,13 @@ function App() {
       getTransactions();
     }
   }, [apiKey, urlKey]);
+
+  useEffect(() => {
+    localStorage.setItem("apiKey", apiKey);
+    localStorage.setItem("nameKey", nameKey);
+    localStorage.setItem("urlKey", urlKey);
+    localStorage.setItem("lnurlKey", lnurlKey);
+  }, [apiKey, nameKey, urlKey, lnurlKey]);
 
 
   useEffect(() => {
