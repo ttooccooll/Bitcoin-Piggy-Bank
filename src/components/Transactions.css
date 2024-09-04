@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('Cookiemonster-gv11.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyFontz';
+  src: url('BalonkuRegular-la1w.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyFonth';
+  src: url('Honeybeeregular-MG0p.ttf') format('truetype');
+}
+
+p.t {
+  padding: 6px 5px 6px 5px;
+  background: solid black;
+  white-space: nowrap;
+  font-family: "MyFontz";
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 3px;
+  text-align: center;
+}
+
+p.u {
+  padding: 6px 5px 6px 5px;
+  background: solid black;
+  white-space: nowrap;
+  font-family: "MyFontz";
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 3px;
+  text-align: center;
+}
+
+p.q {
+  padding: 6px 5px 6px 5px;
+  background: solid black;
+  white-space: nowrap;
+  font-family: "MyFontz";
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 3px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+p.r {
+  padding: 6px 5px 6px 5px;
+  background: solid black;
+  white-space: nowrap;
+  font-family: "MyFontz";
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 3px;
+  text-align: center;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: space-around;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+}
+
+.rosie {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: space-around;
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.rosiex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}

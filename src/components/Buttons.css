@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'MyFontb';
+  src: url('BemirsDemoVersionRegular-L360Z.ttf') format('truetype');
+}
+
+label {
+  padding-bottom: 2%;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background: linear-gradient(to top, rgba(214, 122, 0) 0%, rgba(251, 173, 7, 1) 80%, rgba(175, 80, 1) 100%);
+  border: 2px solid #000000;
+  border-radius: 4px;
+  font-size: 20px;
+  text-shadow: 0 0 2px #000000;
+  font-weight: bold;
+  margin-top: 121px;
+  margin-right: -120px;
+  width: 140px;
+  height: 30px;
+  color: inherit;
+  text-decoration: inherit;
+  transform: rotate(90deg);
+  font-family: "MyFontb";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.a {
+  background: linear-gradient(to top, rgba(247, 10, 186) 10%, rgb(145, 21, 79) 70%, rgb(110, 8, 56) 100%);
+  border: 2px solid #000000;
+  border-radius: 4px;
+  font-size: 21px;
+  text-shadow: 0 0 1px #de620f;
+  font-family: 'MyFontb';
+  font-weight: bold;
+  margin-top: 111px;
+  margin-right: -65px;
+  width: 155px;
+  height: 27px;
+  color: inherit;
+  text-decoration: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: rotate(90deg);
+}
+
+.b {
+  background: linear-gradient(to top, rgba(75, 116, 74) 0%, rgba(199, 210, 22) 75%, rgb(44, 81, 45) 100%);
+  border: 2px solid #000000;
+  border-radius: 4px;
+  font-size: 19px;
+  text-shadow: 0 0 1px #000000;
+  font-family: 'MyFontb';
+  font-weight: bold;
+  margin-top: 118px;
+  margin-right: -113px;
+  width: 140px;
+  height: 26px;
+  color: rgb(12, 64, 15);
+  text-decoration: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: rotate(90deg);
+}
+
+.d {
+  background: linear-gradient(to top, rgb(46, 40, 161) 0%, rgb(12, 149, 198) 60%, rgb(99, 17, 162) 100%);
+  border: 2px solid #000000;
+  border-radius: 4px;
+  font-size: 18px;
+  text-shadow: 0 0 1px #000000;
+  font-weight: bold;
+  margin-top: 113px;
+  margin-right: -123px;
+  width: 152px;
+  height: 24px;
+  color: rgb(101, 8, 8);
+  text-decoration: inherit;
+  transform: rotate(90deg);
+  font-family: "MyFontb";
+  text-align: center;
+  align-items: center;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  transform: rotate(85deg);
+}
+
+.buttons a:hover {
+  cursor: pointer;
+  transform: rotate(85deg);
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('Cookiemonster-gv11.ttf') format('truetype');
+}
+
+.buttonq {
+  background: linear-gradient(to top, rgb(155, 219, 143) 0%, rgba(247, 10, 186, 1) 50%, rgb(92, 77, 249) 100%);
+  border: 10px double linear-gradient(to right, rgb(241, 46, 46) 0%, rgb(144, 247, 10, 1) 50%, rgb(69, 163, 222, 1) 100%);;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  color: rgb(239, 198, 145);
+  text-decoration: dotted;
+  margin: 5px 0 5px 0;
+}
+
+.buttonq:hover {
+  cursor: pointer;
+  color: black;
+  opacity: .8;
+  transform: skew(4);
+}
+
+.modal {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

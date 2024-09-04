@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('Cookiemonster-gv11.ttf') format('truetype');
+  background-color: black;
+}
+
+.chart-container {
+  font-family: 'MyFont';
+  background: linear-gradient(135deg, #000000, #001f3f);
+  cursor: crosshair;
+  margin: 0% 0% 0% 0%;
+  overflow: hidden;
+  box-shadow: rgba(106, 208, 193, 0.35) 0px -50px 536px -28px inset;
+  border-radius: 25px;
+  height: fit-content;
+  width: fit-content;
+  padding: 0% 6% 0% 6%;
+  z-index: 100000;
+}
+
+.tick text {
+  fill: rgb(239, 231, 203);
+  font-size: xx-small;
+  background-color: black;
+  font-family: 'MyFont';
+}
+
+.timestamp {
+  font-family: 'MyFont';
+  color: rgb(239, 231, 203);
+  font-size: xx-small;
+  background-color: black;
+  font-family: 'MyFont';
+}

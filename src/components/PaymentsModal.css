@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('Cookiemonster-gv11.ttf') format('truetype');
+}
+
+form {
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'MyFont';
+  font-size: 25px;
+  color: fuchsia;
+  animation-name: animatetop;
+  animation-duration: 1.5s;
+  position: relative;
+}
+
+@keyframes animatetop {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+form .button {
+  margin: 10% auto;
+  animation-name: animatetop;
+  animation-duration: 1.5s;
+  z-index: 99999;
+}
+
+section h6 {
+  text-align: center;
+  font-family: 'MyFont';
+  font-size: large;
+  color: greenyellow;
+  font-weight: 100;
+  font-size: 25px;
+  position: relative;
+  display: flex;
+  text-align: flex-start;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  animation-name: animatetop;
+  animation-duration: 3s;
+  z-index: 99999;
+}
+
+section p {
+  word-wrap: break-word;
+  font-family: 'MyFont';
+  font-size: 17px;
+  color: orange;
+  margin: 10px;
+  position: relative;
+  animation-name: animatetop;
+  animation-duration: 1s;
+  z-index: 99999;
+}
+
+.close-button {
+  cursor: pointer;
+  text-align: end;
+  font-family: 'MyFont';
+  font-size: 50px;
+  color: rgb(197, 255, 73);
+  padding: 0;
+  margin: 0;
+  animation-name: animatetop;
+  animation-duration: 1.5s;
+  z-index: 9999;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(25, 48, 149);
+  font-size: large;
+  animation-name: animatetop;
+  animation-duration: 6s;
+  z-index: 9999;
+}

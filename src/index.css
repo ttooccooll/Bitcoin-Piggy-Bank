@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('Cookiemonster-gv11.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'MyFont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'MyFont';
+}
