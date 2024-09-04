@@ -21,7 +21,7 @@ function App() {
   const [nameKey, setNameKey] = useStateQuery("nameKey", localStorage.getItem("nameKey") || "");
   const [urlKey, setUrlKey] = useStateQuery("urlKey", localStorage.getItem("urlKey") || "");
   const [lnurlKey, setLnurlKey] = useStateQuery("lnurlKey", localStorage.getItem("lnurlKey") || "");
-  const [showTitleScreen, setShowTitleScreen] = useState(localStorage.getItem("showTitleScreen") !== "false");
+  const [showTitleScreen, setShowTitleScreen] = useStateQuery(localStorage.getItem("showTitleScreen") !== "false");
   const [modalState, setModalState] = useState({ type: "", open: false });
   
   const handleLogout = () => {
@@ -118,8 +118,7 @@ function App() {
     localStorage.setItem("nameKey", nameKey);
     localStorage.setItem("urlKey", urlKey);
     localStorage.setItem("lnurlKey", lnurlKey);
-    localStorage.getItem("showTitleScreen", showTitleScreen);
-  }, [apiKey, nameKey, urlKey, lnurlKey, showTitleScreen]);
+  }, [apiKey, nameKey, urlKey, lnurlKey]);
 
 
   useEffect(() => {

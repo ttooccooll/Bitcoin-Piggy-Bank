@@ -1,78 +1,76 @@
 .total-btc {
-    font-size: 20px;
-    color: rgb(159, 9, 152);
-    margin: 5px;
-    width: 150px;
-    background-color: aqua;
-    border: aqua solid 10px;
-    display: flex;
-    flex-direction: row;
-    overflow: wrap;
-    justify-content: center;
-    align-items: center;
-    animation-name: animatetop;
-    animation-duration: 1s;
-  }
-  
-  .total-btc:hover {
-    cursor: default;
-    opacity: 2;
-    transform: rotateX(15deg) rotateY(10deg) rotate3d(1, 1, 1, 15deg);
-  }
+  font-size: 50px;
+  color: rgb(159, 9, 152);
+  margin: 10px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  overflow: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: animatetop;
+  animation-duration: 1s;
+}
 
-  .total-btc1 {
-    font-size: 20px;
-    color: rgb(255, 0, 242);
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    overflow: wrap;
-    justify-content: center;
-    align-items: center;
-    animation-name: animatetop;
-    animation-duration: 2s;
-    cursor: pointer;
-    background: linear-gradient(90deg, #ff0066, #00cc00);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: glowing 5s infinite alternate;
-    border-radius: 10px;
-    padding: 10px;
+.total-btc:hover {
+  cursor: default;
+  opacity: 2;
+  transform: rotateX(15deg) rotateY(10deg) rotate3d(1, 1, 1, 15deg);
+}
+
+.total-btc1 {
+  font-size: 20px;
+  color: rgb(255, 0, 242);
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  overflow: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: animatetop;
+  animation-duration: 2s;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff0066, #00cc00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glowing 5s infinite alternate;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 @keyframes glowing {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 0, 102, 0.8), 0 0 40px rgba(0, 204, 0, 0.8);
-    }
-    100% {
-        box-shadow: 0 0 40px rgba(8, 103, 170, 1), 0 0 10px rgba(166, 157, 56, 1);
-    }
+  0% {
+      box-shadow: 0 0 10px rgba(255, 0, 102, 0.8), 0 0 40px rgba(0, 204, 0, 0.8);
+  }
+  100% {
+      box-shadow: 0 0 40px rgba(8, 103, 170, 1), 0 0 10px rgba(166, 157, 56, 1);
+  }
 }
 
 .total-btc1:hover {
-  cursor: default;
-  color: rgb(143, 23, 23);
-  transform: rotateX(0deg) rotateY(0deg) rotate3d(-1, -1, -1, 361deg);
+cursor: default;
+color: rgb(143, 23, 23);
+transform: rotateX(0deg) rotateY(0deg) rotate3d(-1, -1, -1, 361deg);
 }
 
-  .total-btc2 {
-    font-size: 20px;
-    color: rgb(137, 159, 9);
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-    overflow: wrap;
-    justify-content: center;
-    align-items: center;
-    animation: glowing 4s infinite alternate;
-    border-radius: 90px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  
-  .total-btc2:hover {
-    cursor: default;
-    color: rgb(143, 23, 23);
-    transform: rotateX(1deg) rotateY(1deg) rotate3d(1, 1, 1, 1deg);
-  }
+.total-btc2 {
+  font-size: 20px;
+  color: rgb(137, 159, 9);
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow: wrap;
+  justify-content: center;
+  align-items: center;
+  animation: glowing 4s infinite alternate;
+  border-radius: 90px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.total-btc2:hover {
+  cursor: default;
+  color: rgb(143, 23, 23);
+  transform: rotateX(1deg) rotateY(1deg) rotate3d(1, 1, 1, 1deg);
+}
