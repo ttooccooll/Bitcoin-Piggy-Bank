@@ -1,8 +1,9 @@
 .total-btc {
-  font-size: 50px;
+  font-size: 25px;
   color: rgb(159, 9, 152);
-  margin: 10px;
+  margin: 50px 10px 0 10px;
   background-color: aqua;
+  width: 200px;
   display: flex;
   flex-direction: row;
   overflow: wrap;
@@ -73,4 +74,40 @@ transform: rotateX(0deg) rotateY(0deg) rotate3d(-1, -1, -1, 361deg);
   cursor: default;
   color: rgb(143, 23, 23);
   transform: rotateX(1deg) rotateY(1deg) rotate3d(1, 1, 1, 1deg);
+}
+
+.lnurl1 {
+  font-size: 20px;
+    color: rgb(255, 0, 242);
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: wrap;
+    justify-content: center;
+    align-items: center;
+    animation-name: animatetop;
+    animation-duration: 2s;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff0066, #00cc00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glowing 5s infinite alternate;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.lnurl2 {
+  font-size: 20px;
+    color: rgb(137, 159, 9);
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: wrap;
+    justify-content: center;
+    align-items: center;
+    animation: glowing 4s infinite alternate;
+    border-radius: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

@@ -243,7 +243,7 @@ function App() {
         <div className="bookgo">
           <Bio />
           <PdfModal />
-          <LnModal />
+          <LnModal lnurlKey={lnurlKey} />
           <div className="full" onClick={() => {
             playMP7();
             if (document.documentElement.requestFullscreen) {

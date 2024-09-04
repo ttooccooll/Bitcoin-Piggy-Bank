@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import QRCode from 'qrcode.react';
 import "./PdfModal.css";
 
-function LnModal(lnurlKey) {
+function LnModal({lnurlKey}) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
-    const audioOpen = new Audio(`${process.env.PUBLIC_URL}/pg10.mp3`);
+    const audioOpen = new Audio(`/pg10.mp3`);
     audioOpen.play();
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    const audioClose = new Audio(`${process.env.PUBLIC_URL}/put-away-book.mp3`);
+    const audioClose = new Audio(`/put-away-book.mp3`);
     audioClose.play();
   };
 
@@ -41,16 +41,16 @@ function LnModal(lnurlKey) {
       </span>
 
       {modalOpen && (
-        <div className="modal-overlay" onClick={() => closeModal()}>
+        <div className="modal-overlaylnurl" onClick={() => closeModal()}>
           <div className="modal-content-centered" >
             X
-            <span className="total-btc1" onClick={() => closeModal()}>
+            <span className="lnurl1" onClick={() => closeModal()}>
               &times;
             </span>
-            <div className="total-btc2">
+            <div className="lnurl2">
                 <QRCode value={lnurlKey} size={300} />
             </div>
-            <div className="total-btc1">
+            <div className="lnurl1">
                 {lnurlKey}
             </div>
           </div>
