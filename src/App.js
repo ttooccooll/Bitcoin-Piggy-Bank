@@ -118,7 +118,7 @@ function App() {
     localStorage.setItem("nameKey", nameKey);
     localStorage.setItem("urlKey", urlKey);
     localStorage.setItem("lnurlKey", lnurlKey);
-    localStorage.getItem("showTitleScreen");
+    localStorage.getItem("showTitleScreen", showTitleScreen);
   }, [apiKey, nameKey, urlKey, lnurlKey, showTitleScreen]);
 
 
