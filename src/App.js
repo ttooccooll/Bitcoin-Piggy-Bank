@@ -21,7 +21,7 @@ function App() {
   const [nameKey, setNameKey] = useStateQuery("nameKey", localStorage.getItem("nameKey") || "");
   const [urlKey, setUrlKey] = useStateQuery("urlKey", localStorage.getItem("urlKey") || "");
   const [lnurlKey, setLnurlKey] = useStateQuery("lnurlKey", localStorage.getItem("lnurlKey") || "");
-  const [showTitleScreen, setShowTitleScreen] = useStateQuery(localStorage.getItem("showTitleScreen") !== "false");
+  const [showTitleScreen, setShowTitleScreen] = useStateQuery("showTitleScreen", localStorage.getItem("showTitleScreen") === "true" || !localStorage.getItem("showTitleScreen"));
   const [modalState, setModalState] = useState({ type: "", open: false });
   
   const handleLogout = () => {
@@ -31,8 +31,12 @@ function App() {
     setLnurlKey("");
     setShowTitleScreen(true);
     localStorage.setItem("showTitleScreen", "true");
-    localStorage.clear();
+    localStorage.removeItem("apiKey");
+    localStorage.removeItem("nameKey");
+    localStorage.removeItem("urlKey");
+    localStorage.removeItem("lnurlKey");
   };
+  
 
   const getPrice = () => {
     axios
