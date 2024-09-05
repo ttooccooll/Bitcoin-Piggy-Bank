@@ -327,9 +327,17 @@ h2:hover {
 }
 
 input::placeholder {
+  overflow: visible;
+  font-size: .9em;
+  color: #191717;
+  opacity: .8;
+}
 
-  color: #191717; /* Light gray color */
-  opacity: .8; /* Ensures full color opacity */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 1px solid #47230a;
 }
 
 .startButton {

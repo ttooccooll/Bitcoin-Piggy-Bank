@@ -206,7 +206,7 @@ function App() {
             <input
               className='input'
               type="password"
-              placeholder="Enter URL for your LNBITS (everything between https:// and /wallet)"
+              placeholder="Enter name of LNBITS instance"
               value={urlKey}
               onChange={(e) => setUrlKey(e.target.value)}
             />
