@@ -30,6 +30,7 @@ function App() {
     setUrlKey("");
     setLnurlKey("");
     setShowTitleScreen(true);
+    localStorage.setItem("showTitleScreen", "true");
     localStorage.clear();
   };
 
