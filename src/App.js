@@ -19,22 +19,16 @@ function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [apiKey, setApiKey] = useStateQuery("apiKey", localStorage.getItem("apiKey") || "");
   const [nameKey, setNameKey] = useStateQuery("nameKey", localStorage.getItem("nameKey") || "");
-  const [urlKey, setUrlKey] = useStateQuery("urlKey", localStorage.getItem("urlKey") || "");
-  const [lnurlKey, setLnurlKey] = useStateQuery("lnurlKey", localStorage.getItem("lnurlKey") || "");
   const [showTitleScreen, setShowTitleScreen] = useStateQuery("showTitleScreen", localStorage.getItem("showTitleScreen") === "true" || !localStorage.getItem("showTitleScreen"));
   const [modalState, setModalState] = useState({ type: "", open: false });
   
   const handleLogout = () => {
     setApiKey("");
     setNameKey("");
-    setUrlKey("");
-    setLnurlKey("");
     setShowTitleScreen(true);
     localStorage.setItem("showTitleScreen", "true");
     localStorage.removeItem("apiKey");
     localStorage.removeItem("nameKey");
-    localStorage.removeItem("urlKey");
-    localStorage.removeItem("lnurlKey");
   };
   
 
@@ -57,7 +51,7 @@ function App() {
       "Access-Control-Allow-Origin": "*"
     };
     axios
-      .get(`https://${urlKey}/api/v1/wallet`, { headers })
+      .get(`https://api.blink.sv/graphql`, { headers })
       .then((res) => {
         setBalance(parseInt(res.data.balance / 1000));
       })
@@ -70,7 +64,7 @@ function App() {
       "Access-Control-Allow-Origin": "*"
     };
     axios
-      .get(`https://${urlKey}/api/v1/payments`, { headers })
+      .get(`https://api.blink.sv/graphql`, { headers })
       .then((res) => {
         setTransactions(res.data);
       })
@@ -111,19 +105,17 @@ function App() {
   // The brackets hold the trigger that determines when the code inside of useEffect will run
   // Since it is empty [] that means this code will run once on page load
   useEffect(() => {
-    if (apiKey && urlKey) {
+    if (apiKey) {
       getPrice();
       getWalletBalance();
       getTransactions();
     }
-  }, [apiKey, urlKey]);
+  }, [apiKey]);
 
   useEffect(() => {
     localStorage.setItem("apiKey", apiKey);
     localStorage.setItem("nameKey", nameKey);
-    localStorage.setItem("urlKey", urlKey);
-    localStorage.setItem("lnurlKey", lnurlKey);
-  }, [apiKey, nameKey, urlKey, lnurlKey]);
+  }, [apiKey, nameKey]);
 
 
   useEffect(() => {
@@ -185,7 +177,7 @@ function App() {
   };
 
   const handleSubmit = () => {
-    if (nameKey && apiKey && urlKey) {
+    if (nameKey && apiKey) {
       setShowTitleScreen(false);
     }
   };
@@ -206,23 +198,9 @@ function App() {
             <input
               className='input'
               type="password"
-              placeholder="Enter name of LNBITS instance"
-              value={urlKey}
-              onChange={(e) => setUrlKey(e.target.value)}
-            />
-            <input
-              className='input'
-              type="password"
               placeholder="Enter Invoice/read key from LNBITS"
               value={apiKey}
               onChange={(e) => setApiKey(e.target.value)}
-            />
-            <input
-              className='input'
-              type="text"
-              placeholder="Optional - include your lnurl"
-              value={lnurlKey}
-              onChange={(e) => setLnurlKey(e.target.value)}
             />
             <button className="startButton" onClick={handleSubmit}>Start</button>
           </div>
@@ -240,7 +218,7 @@ function App() {
           <p style={{ fontSize: '40px', fontStyle: '#2b1603' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >{balance}</p>
           <p style={{ fontSize: '35px', fontStyle: '#2b1603' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >sats</p>
         </div>
-        <Buttons apiKey={apiKey} urlKey={urlKey} />
+        <Buttons apiKey={apiKey} />
         </div>
         <div className="hungry">
           <img src={process.env.PUBLIC_URL + "/hungry.png"} alt="" style={{ width: "120px", opacity:.7, cursor: "pointer" }} onClick={handleLogout} title="Go outside and play! (logout)"/>
@@ -248,7 +226,6 @@ function App() {
         <div className="bookgo">
           <Bio />
           <PdfModal />
-          <LnModal lnurlKey={lnurlKey} />
           <div className="full" onClick={() => {
             playMP7();
             if (document.documentElement.requestFullscreen) {
