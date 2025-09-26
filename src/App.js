@@ -48,6 +48,7 @@ function App() {
   const getWalletBalance = () => {
     const headers = {
       "X-Api-Key": apiKey,
+      "Content-Type": application/json,
       "Access-Control-Allow-Origin": "*"
     };
     axios
@@ -61,6 +62,7 @@ function App() {
   const getTransactions = () => {
     const headers = {
       "X-Api-Key": apiKey,
+      "Content-Type": application/json,
       "Access-Control-Allow-Origin": "*"
     };
     axios
